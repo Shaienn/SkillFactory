@@ -46,6 +46,7 @@ def game_core_v3(number):
     min_range = 1
  
     while True:
+        # Устанавливаем новое проверочное значение 
         predict = min_range + ((max_range - min_range) // 2)
         
         if number == predict:
@@ -53,6 +54,7 @@ def game_core_v3(number):
             
         count += 1    
         
+        # Уменьшаем исследуемый диапазон
         if (number < predict) and (max_range > predict):
             max_range = predict
         if (number > predict) and (min_range < predict):
